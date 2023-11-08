@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background-color: #dfdbdb;
+    font-size: x-large;
+}
+
+header {
+    background-color: #2d3a44;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+section ol {
+    background-color: rgb(190, 190, 125);
+    padding-left: 50px;
+    padding-right: 30px;
+    margin: 30px auto;
+    border-right: 15px;
+    width: 20%;
+    list-style-type: upper-roman;
+}
+
+section a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+section a:hover, a:active{
+    color: blueviolet;
+}
+
+#boton1{
+    margin: 0.5% 40%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#boton2{
+    margin: 0.5% 40%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#calcular{
+    margin: 0.5% 44%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#boton3{
+    margin: 0.5% 44%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#resultado{
+    transition: box-shadow 0.3s ease;
+    background-color: white;
+    margin: 2% 42%;
+    border-radius: 5px;
+    padding: auto;
+    cursor: pointer;
+}
+
+#resultado:hover{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
+}
+
+#op1, #op2, #operacion{
+    margin: 0.5% 40%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#calcular2{
+    margin: 0.5% 44%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#respuesta2{
+    transition: box-shadow 0.3s ease;
+    background-color: white;
+    margin: 2% 42%;
+    border-radius: 5px;
+    padding: auto;
+    cursor: pointer;
+}
+
+#respuesta2:hover{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
+}
