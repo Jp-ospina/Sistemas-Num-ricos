@@ -73,7 +73,7 @@ else{
 
 // Código JS de Calc. multibase
 
-var base_mul = document.getElementById("base_mul")
+var base_a_usar_mul = document.getElementById("base_mul")
 var a_mul = document.getElementById("op1_mul")
 var b_mul = document.getElementById("operacion_mul")
 var c_mul = document.getElementById("op2_mul")
