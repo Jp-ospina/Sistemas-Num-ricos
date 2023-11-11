@@ -99,3 +99,30 @@ section a:hover, a:active{
 #respuesta2:hover{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
 }
+
+#op1_mul, #op2_mul, #operacion_mul, #base_mul{
+    margin: 0.5% 40%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#calcular_mul, #boton_mul{
+    margin: 0.5% 44%;
+    padding: 5% auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#resultado_mul{
+    transition: box-shadow 0.3s ease;
+    background-color: white;
+    margin: 2% 42%;
+    border-radius: 5px;
+    padding: auto;
+    cursor: pointer;
+}
+
+#resultado_mul:hover{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
+}

@@ -21,6 +21,11 @@
         <ol>
             <li><a href="#conversor" class="enlace">Conversor</a>
             <li><a href="#calculadora" class="enlace">Calculadora</a></li>
+                <ul>
+                    <li>
+                        <a href="#cal_mul">Calculadora multibase</a>
+                    </li>
+                </ul>
         </ol>
     </section>
     <section id="conversor">
@@ -57,6 +62,18 @@
         <h4 id="cal_bin">Calculadora sistema binario</h4>
         <h4 id="cal_oct">Calculadora sistema octal</h4>
         <h4 id="cal_hex">Calculadora sistema hexadecimal</h4>
+        <h4 id="cal_mul">Calculadora multibase</h4>
+        <form action="" method="dialog">
+            <input type="number" id="base_mul" placeholder="Ingrese la base">
+            <input type="number" id="op1_mul" placeholder="Primer número">
+            <input type="text" id="operacion_mul" placeholder="+, -, *, /, %">
+            <input type="number" id="op2_mul" placeholder="Segundo número">
+            
+            <input type="submit" value="Calcular" id="calcular_mul">
+            <button  id="boton_mul" type="reset">Limpiar</button>
+        </form>
+
+    <p id="resultado_mul" onclick="click"></p>
     </section>
         
     <footer></footer>
