@@ -71,6 +71,8 @@ else{
     pResultado2.innerText = "¡Lo sentimos! Algo salió mal."}
 }
 
+
+
 // Código JS de Calc. multibase
 
 var base_a_usar_mul = document.getElementById("base_mul")
@@ -83,40 +85,55 @@ var pResultado_mul = document.getElementById("resultado_mul")
 btnCalcular_mul.addEventListener('click', calculo_mul)
 
 function calculo_mul(){
-    const operacion_mul = b_mul.value
-    const op1_mul = parseFloat(a_mul.value)
-    const op2_mul = parseFloat(c_mul.value)
-
-if (operacion_mul == "+"){
-        rta_mul = op1_mul + op2_mul
-        pResultado_mul.style = "color:black"
-        pResultado_mul.innerText = "= " + rta_mul
-}
-else if (operacion_mul == "*" || operacion_mul == "x" || operacion_mul == "X" || operacion_mul == "."){
-        rta_mul = op1_mul * op2_mul
-        pResultado_mul.style = "color:black"
-        pResultado_mul.innerText = "= " + rta_mul
-}
-else if (operacion_mul == "/"){
-        rta_mul = op1_mul / op2_mul
-        pResultado_mul.style = "color:black"
-        pResultado_mul.innerText = "= " + rta_mul
-}
-else if (operacion_mul == "-" || operacion_mul == "_"){
-        rta_mul = op1_mul - op2_mul
-        pResultado_mul.style = "color:black"
-        pResultado_mul.innerText = "= " + rta_mul
-}
-else if (operacion_mul == "%"){
-        rta_mul = op1_mul % op2_mul
-        pResultado_mul.style = "color:black"
-        pResultado_mul.innerText = "= " + rta_mul
-}
-else{
-    pResultado_mul.style = "color:red"
-    pResultado_mul.innerText = "¡Lo sentimos! Algo salió mal."}
+        console.log("Hola")
 }
 
+/*function calculo_mul(){
+        const base_mul = parseFloat(base_a_usar_mul.value)
+        const operacion_mul = b_mul.value
+        const numero_1 = parseFloat(a_mul.value)
+        const numero_2 = parseFloat(c_mul.value)
+
+        if(base_mul > 0){
+
+                const operador_mul = parseFloat(operacion_mul.value)
+                const numero_1_convertido = parseFloat(numero_1.value)
+                const numero_2_convertido = parseFloat(numero_2.value)
+
+                if (operador_mul == "+"){
+                        rta_mul = numero_1_convertido + numero_2_convertido
+                        let respuesta_mul;
+                        respuesta_mul = rta_mul.toString(base_mul)
+                        pResultado_mul.style = "color:black"
+                        pResultado_mul.innerText = "= " + respuesta_mul
+                }
+                else if (operacion_mul == "*" || operacion_mul == "x" || operacion_mul == "X" || operacion_mul == "."){
+                        rta_mul = numero_1_convertido * numero_2_convertido
+                        pResultado_mul.style = "color:black"
+                        pResultado_mul.innerText = "= " + rta_mul
+                }
+                else if (operacion_mul == "/"){
+                        rta_mul = numero_1_convertido / numero_2_convertido
+                        pResultado_mul.style = "color:black"
+                        pResultado_mul.innerText = "= " + rta_mul
+                }
+                else if (operacion_mul == "-" || operacion_mul == "_"){
+                        rta_mul = numero_1_convertido - numero_2_convertido
+                        pResultado_mul.style = "color:black"
+                        pResultado_mul.innerText = "= " + rta_mul
+                }
+                else if (operacion_mul == "%"){
+                        rta_mul = numero_1_convertido % numero_2_convertido
+                        pResultado_mul.style = "color:black"
+                        pResultado_mul.innerText = "= " + rta_mul
+                }
+                else{
+                pResultado_mul.style = "color:red"
+                pResultado_mul.innerText = "¡Lo sentimos! Algo salió mal."}
+                }
+
+        else{pResultado_mul.style = "color:red"; pResultado_mul.innerText = "¡Lo sentimos! Algo salió mal."}
+}*/
 
 console.log("Finalizado.")
 console.log("Intento de colaboración")
