@@ -32,35 +32,21 @@ section a:hover, a:active{
     color: blueviolet;
 }
 
-#boton1{
+#boton1, #boton2, #op1, #op2, #operacion, #op1_oct, #op2_oct, #op_oct, #op1_hex, #op2_hex, #op_hex{
     margin: 0.5% 40%;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#boton2{
-    margin: 0.5% 40%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#calcular{
+#calcular, #boton3, #calcular2, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
     margin: 0.5% 44%;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#boton3{
-    margin: 0.5% 44%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#resultado{
+#resultado, #respuesta2, #respuesta_oct, #respuesta_hex{
     transition: box-shadow 0.3s ease;
     background-color: white;
     margin: 2% 42%;
@@ -69,60 +55,6 @@ section a:hover, a:active{
     cursor: pointer;
 }
 
-#resultado:hover{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
-}
-
-#op1, #op2, #operacion{
-    margin: 0.5% 40%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#calcular2{
-    margin: 0.5% 44%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#respuesta2{
-    transition: box-shadow 0.3s ease;
-    background-color: white;
-    margin: 2% 42%;
-    border-radius: 5px;
-    padding: auto;
-    cursor: pointer;
-}
-
-#respuesta2:hover{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
-}
-
-#op1_mul, #op2_mul, #operacion_mul, #base_mul{
-    margin: 0.5% 40%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#calcular_mul, #boton_mul{
-    margin: 0.5% 44%;
-    padding: 5% auto;
-    border: solid black 1px;
-    border-radius: 5px;
-}
-
-#resultado_mul{
-    transition: box-shadow 0.3s ease;
-    background-color: white;
-    margin: 2% 42%;
-    border-radius: 5px;
-    padding: auto;
-    cursor: pointer;
-}
-
-#resultado_mul:hover{
+#resultado:hover, #respuesta2:hover, #respuesta_oct:hover, #respuesta_hex:hover{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
 }
