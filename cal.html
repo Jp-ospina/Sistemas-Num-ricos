@@ -46,7 +46,7 @@
         <h4 id="cal_dec">Calculadora sistema decimal</h4>
         <form action="" method="dialog">
             <input type="number" id="op1" placeholder="Primer número">
-            <input type="text" id="operacion" placeholder="+, -, *, /, %">
+            <input type="text" id="operacion" placeholder="+, -, *, ^, /, %">
             <input type="number" id="op2" placeholder="Segundo número">
             
             <input type="submit" value="Calcular" id="calcular2">
@@ -54,9 +54,35 @@
         </form>
         
         <p id="respuesta2"></p>
+        
         <h4 id="cal_bin">Calculadora sistema binario</h4>
+
         <h4 id="cal_oct">Calculadora sistema octal</h4>
+
+        <form action="" method="dialog">
+            <input type="text" id="op1_oct" placeholder="Primer número">
+            <input type="text" id="op_oct" placeholder="+, -, *, ^, /, %">
+            <input type="text" id="op2_oct" placeholder="Segundo número">
+            
+            <input type="submit" value="Calcular" id="calcular_oct">
+            <button  id="reset_oct" type="reset">Limpiar</button>
+        </form>
+        
+        <p id="respuesta_oct"></p>
+
         <h4 id="cal_hex">Calculadora sistema hexadecimal</h4>
+
+        <form action="" method="dialog">
+            <input type="text" id="op1_hex" placeholder="Primer número">
+            <input type="text" id="op_hex" placeholder="+, -, *, ^, /, %">
+            <input type="text" id="op2_hex" placeholder="Segundo número">
+            
+            <input type="submit" value="Calcular" id="calcular_hex">
+            <button  id="reset_hex" type="reset">Limpiar</button>
+        </form>
+        
+        <p id="respuesta_hex"></p>
+
     </section>
     <br><br><br><br>
     <footer></footer>

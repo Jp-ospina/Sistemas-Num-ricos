@@ -41,99 +41,157 @@ function calculo(){
     const op1 = parseFloat(a.value)
     const op2 = parseFloat(c.value)
 
-if (operacion == "+"){
-        rta = op1 + op2
-        pResultado2.style = "color:black"
-        pResultado2.innerText = "= " + rta
-}
-else if (operacion == "*" || operacion == "x" || operacion == "X" || operacion == "."){
-        rta = op1 * op2
-        pResultado2.style = "color:black"
-        pResultado2.innerText = "= " + rta
-}
-else if (operacion == "/"){
-        rta = op1 / op2
-        pResultado2.style = "color:black"
-        pResultado2.innerText = "= " + rta
-}
-else if (operacion == "-" || operacion == "_"){
-        rta = op1 - op2
-        pResultado2.style = "color:black"
-        pResultado2.innerText = "= " + rta
-}
-else if (operacion == "%"){
-        rta = op1 % op2
-        pResultado2.style = "color:black"
-        pResultado2.innerText = "= " + rta
-}
-else{
-    pResultado2.style = "color:red"
-    pResultado2.innerText = "¡Lo sentimos! Algo salió mal."}
-}
-
-
-
-// Código JS de Calc. multibase
-
-var base_a_usar_mul = document.getElementById("base_mul")
-var a_mul = document.getElementById("op1_mul")
-var b_mul = document.getElementById("operacion_mul")
-var c_mul = document.getElementById("op2_mul")
-var btnCalcular_mul = document.getElementById("calcular_mul")
-var pResultado_mul = document.getElementById("resultado_mul")
-
-btnCalcular_mul.addEventListener('click', calculo_mul)
-
-function calculo_mul(){
-        console.log("Hola")
+        if (operacion == "+"){
+                rta = op1 + op2
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else if (operacion == "*" || operacion == "x" || operacion == "X" || operacion == "."){
+                rta = op1 * op2
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else if (operacion == "^"){
+                rta = Math.pow(op1,op2)
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else if (operacion == "/"){
+                rta = op1 / op2
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else if (operacion == "-" || operacion == "_"){
+                rta = op1 - op2
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else if (operacion == "%"){
+                rta = op1 % op2
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+        }
+        else{
+        pResultado2.style = "color:red"
+        pResultado2.innerText = "¡Lo sentimos! Algo salió mal."}
 }
 
-/*function calculo_mul(){
-        const base_mul = parseFloat(base_a_usar_mul.value)
-        const operacion_mul = b_mul.value
-        const numero_1 = parseFloat(a_mul.value)
-        const numero_2 = parseFloat(c_mul.value)
 
-        if(base_mul > 0){
 
-                const operador_mul = parseFloat(operacion_mul.value)
-                const numero_1_convertido = parseFloat(numero_1.value)
-                const numero_2_convertido = parseFloat(numero_2.value)
+// Calculadora octal
 
-                if (operador_mul == "+"){
-                        rta_mul = numero_1_convertido + numero_2_convertido
-                        let respuesta_mul;
-                        respuesta_mul = rta_mul.toString(base_mul)
-                        pResultado_mul.style = "color:black"
-                        pResultado_mul.innerText = "= " + respuesta_mul
-                }
-                else if (operacion_mul == "*" || operacion_mul == "x" || operacion_mul == "X" || operacion_mul == "."){
-                        rta_mul = numero_1_convertido * numero_2_convertido
-                        pResultado_mul.style = "color:black"
-                        pResultado_mul.innerText = "= " + rta_mul
-                }
-                else if (operacion_mul == "/"){
-                        rta_mul = numero_1_convertido / numero_2_convertido
-                        pResultado_mul.style = "color:black"
-                        pResultado_mul.innerText = "= " + rta_mul
-                }
-                else if (operacion_mul == "-" || operacion_mul == "_"){
-                        rta_mul = numero_1_convertido - numero_2_convertido
-                        pResultado_mul.style = "color:black"
-                        pResultado_mul.innerText = "= " + rta_mul
-                }
-                else if (operacion_mul == "%"){
-                        rta_mul = numero_1_convertido % numero_2_convertido
-                        pResultado_mul.style = "color:black"
-                        pResultado_mul.innerText = "= " + rta_mul
-                }
-                else{
-                pResultado_mul.style = "color:red"
-                pResultado_mul.innerText = "¡Lo sentimos! Algo salió mal."}
-                }
+const numOct1 = document.getElementById("op1_oct")
+const opOct = document.getElementById("op_oct")
+const numOct2 = document.getElementById("op2_oct")
+const btOct = document.getElementById("calcular_oct")
+const pResultadoOct = document.getElementById("respuesta_oct")
 
-        else{pResultado_mul.style = "color:red"; pResultado_mul.innerText = "¡Lo sentimos! Algo salió mal."}
-}*/
+btOct.addEventListener('click', calculo_oct)
+
+function calculo_oct(){
+        let octToDecimal = oct => parseInt(oct, 8);
+        let op1_oct = octToDecimal(numOct1.value);
+        let op2_oct = octToDecimal(numOct2.value);
+        const op_oct = opOct.value
+        
+        if (op_oct == "+"){
+                rta_oct = op1_oct + op2_oct
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else if (op_oct == "*" || op_oct == "x" || op_oct == "X" || op_oct == "."){
+                rta_oct = op1_oct * op2_oct
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else if (op_oct == "^"){
+                rta_oct = Math.pow(op1_oct, op2_oct)
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else if (op_oct == "/"){
+                rta_oct = op1_oct / op2_oct
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else if (op_oct == "-" || op_oct == "_"){
+                rta_oct = op1_oct - op2_oct
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else if (op_oct == "%"){
+                rta_oct = op1_oct % op2_oct
+                rtaOct = rta_oct.toString(8)
+                pResultadoOct.style = "color:black"
+                pResultadoOct.innerText = "= " + rtaOct
+        }
+        else{
+            pResultadoOct.style = "color:red"
+            pResultadoOct.innerText = "¡Lo sentimos! Algo salió mal."}
+}
+
+
+// Calculadora hexadecimal
+
+const numHex1 = document.getElementById("op1_hex")
+const opHex = document.getElementById("op_hex")
+const numHex2 = document.getElementById("op2_hex")
+const btHex = document.getElementById("calcular_hex")
+const pResultadoHex = document.getElementById("respuesta_hex")
+
+btHex.addEventListener('click', calculo_hex)
+
+function calculo_hex(){
+        let hexToDecimal = hex => parseInt(hex, 16);
+        let op1_hex = hexToDecimal(numHex1.value);
+        let op2_hex = hexToDecimal(numHex2.value);
+        const op_hex = opHex.value
+        
+        if (op_hex == "+"){
+                rta_hex = op1_hex + op2_hex
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else if (op_hex == "*" || op_hex == "x" || op_hex == "X" || op_hex == "."){
+                rta_hex = op1_hex * op2_hex
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else if (op_hex == "^"){
+                rta_hex = Math.pow(op1_hex, op2_hex)
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else if (op_hex == "/"){
+                rta_hex = op1_hex / op2_hex
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else if (op_hex == "-" || op_hex == "_"){
+                rta_hex = op1_hex - op2_hex
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else if (op_hex == "%"){
+                rta_hex = op1_hex % op2_hex
+                rtaHex = rta_hex.toString(16)
+                pResultadoHex.style = "color:black"
+                pResultadoHex.innerText = "= " + rtaHex
+        }
+        else{
+            pResultadoHex.style = "color:red"
+            pResultadoHex.innerText = "¡Lo sentimos! Algo salió mal."}
+}
 
 console.log("Finalizado.")
 console.log("Intento de colaboración")
