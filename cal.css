@@ -30,31 +30,53 @@ section a:link, a:visited{
 
 section a:hover, a:active{
     color: blueviolet;
+    text-decoration: none;
 }
 
-#boton1, #boton2, #op1, #op2, #operacion, #op1_oct, #op2_oct, #op_oct, #op1_hex, #op2_hex, #op_hex{
-    margin: 0.5% 40%;
+#container1, #container2{
+    display: flex;
+    margin: 0 300px;
+}
+
+.titleConv{
+    margin: 0;
+    padding: 0;
+}
+
+.subsection{
+    text-align: center;
+    background-color: rgba(0, 72, 27, 0.9);
+    width: 350px;;
+    height: 180px;
+    margin: 30px 50px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 8px;
+}
+
+#boton1, #boton2, #boton1_bin, #boton2_bin, #boton1_oct, #boton2_oct, #boton1_hex, #boton2_hex, #op1, #op2, #operacion, #op1_oct, #op2_oct, #op_oct, #op1_hex, #op2_hex, #op_hex{
+    margin: 0.5% auto;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#calcular, #boton3, #calcular2, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
-    margin: 0.5% 44%;
+#calcular, #boton3, #calcular_bin, #boton3_bin, #calcular_Oct, #boton3_oct, #calcular_Hex, #boton3_hex, #calcular2, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
+    margin: 0.5% auto;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#resultado, #respuesta2, #respuesta_oct, #respuesta_hex{
+#resultado, #resultado_bin, #resultado_oct, #resultado_hex, #respuesta2, #respuesta_oct, #respuesta_hex, #respuesta_bin, #respuesta_oct_dec, #respuesta_hex_dec{
     transition: box-shadow 0.3s ease;
     background-color: white;
-    margin: 2% 42%;
+    width: 320px;
+    margin: 10px;
     border-radius: 5px;
-    padding: auto;
+    padding: 0px;
     cursor: pointer;
 }
 
-#resultado:hover, #respuesta2:hover, #respuesta_oct:hover, #respuesta_hex:hover{
+#resultado:hover, #resultado_bin:hover, #resultado_oct:hover, #resultado_hex:hover, #respuesta2:hover, #respuesta_oct:hover, #respuesta_hex:hover, #respuesta_bin:hover, #respuesta_oct_dec:hover, #respuesta_hex_dec:hover{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
 }
