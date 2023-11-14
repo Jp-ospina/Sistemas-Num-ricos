@@ -24,20 +24,67 @@
         </ol>
     </section>
     <section id="conversor">
+        
         <h3>Conversor de bases de sistemas númericos</h3>
         <p>En esta sección se puede realizar conversiones entre bases numéricas como base 2 (binario), base 8 (octal), base 10 (decimal), base 16 (hexadecimal)</p>
         <br>
-        <form action="" method="dialog">
-            <input  id="boton1" type="text" placeholder="Ingrese un número: ">
-            <br>
-            <input  id="boton2" type="number" placeholder="Ingrese la base: ">
-            <br>
-            <input type="submit" value="Calcular" id="calcular">
-            <br>
-            <button  id="boton3" type="reset">Limpiar</button>
-        </form>
-
-    <p id="resultado" onclick="click"></p>
+        <section id="container1">
+            <div class="subsection">
+                <h4 class="titleConv">Decimal</h4>
+                <form action="" method="dialog">
+                    <input  id="boton1" type="number" placeholder="Ingrese un número: (Dec)">
+                    <br>
+                    <input  id="boton2" type="number" placeholder="Ingrese la base: ">
+                    <br>
+                    <input type="submit" value="Calcular" id="calcular">
+                    <br>
+                    <button  id="boton3" type="reset">Limpiar</button>
+                </form>
+                <p id="resultado" onclick="click"></p>
+            </div>
+            <div class="subsection">
+                <h4 class="titleConv">Binario</h4>
+                <form action="" method="dialog">
+                    <input  id="boton1_bin" type="number" placeholder="Ingrese un número: (Bin)">
+                    <br>
+                    <input  id="boton2_bin" type="number" placeholder="Ingrese la base: ">
+                    <br>
+                    <input type="submit" value="Calcular" id="calcular_bin">
+                    <br>
+                    <button  id="boton3_bin" type="reset">Limpiar</button>
+                </form>
+                <p id="resultado_bin" onclick="click"></p>
+            </div>
+        </section>
+        <br>
+        <section id="container2">
+            <div class="subsection">
+                <h4 class="titleConv">Octal</h4>
+                <form action="" method="dialog">
+                    <input  id="boton1_oct" type="number" placeholder="Ingrese un número: (Oct)">
+                    <br>
+                    <input  id="boton2_oct" type="number" placeholder="Ingrese la base: ">
+                    <br>
+                    <input type="submit" value="Calcular" id="calcular_Oct">
+                    <br>
+                    <button  id="boton3_oct" type="reset">Limpiar</button>
+                </form>
+                <p id="resultado_oct" onclick="click"></p>
+            </div>
+            <div class="subsection">
+                <h4 class="titleConv">Hexadecimal</h4>
+                <form action="" method="dialog">
+                    <input  id="boton1_hex" type="text" placeholder="Ingrese un número: (Hex)">
+                    <br>
+                    <input  id="boton2_hex" type="number" placeholder="Ingrese la base: ">
+                    <br>
+                    <input type="submit" value="Calcular" id="calcular_Hex">
+                    <br>
+                    <button  id="boton3_hex" type="reset">Limpiar</button>
+                </form>
+                <p id="resultado_hex" onclick="click"></p>
+            </div>
+        </section>
     </section>
     <section id="calculadora">
         <h3>Calculadora de bases de sistemas númericos</h3>
@@ -57,18 +104,21 @@
         
         <h4 id="cal_bin">Calculadora sistema binario</h4>
 
+        <p id="respuesta_bin"></p>
+
         <h4 id="cal_oct">Calculadora sistema octal</h4>
 
         <form action="" method="dialog">
-            <input type="text" id="op1_oct" placeholder="Primer número">
+            <input type="number" id="op1_oct" placeholder="Primer número">
             <input type="text" id="op_oct" placeholder="+, -, *, ^, /, %">
-            <input type="text" id="op2_oct" placeholder="Segundo número">
+            <input type="number" id="op2_oct" placeholder="Segundo número">
             
             <input type="submit" value="Calcular" id="calcular_oct">
             <button  id="reset_oct" type="reset">Limpiar</button>
         </form>
         
         <p id="respuesta_oct"></p>
+        <p id="respuesta_oct_dec"></p>
 
         <h4 id="cal_hex">Calculadora sistema hexadecimal</h4>
 
@@ -82,6 +132,7 @@
         </form>
         
         <p id="respuesta_hex"></p>
+        <p id="respuesta_hex_dec"></p>
 
     </section>
     <br><br><br><br>
