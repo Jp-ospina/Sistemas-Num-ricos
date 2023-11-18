@@ -35,7 +35,7 @@ section a:hover, a:active{
 
 #container1, #container2{
     display: flex;
-    margin: 0 300px;
+    margin: 0 15%;
 }
 
 .titleConv{

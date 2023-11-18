@@ -19,6 +19,13 @@ function calcular(){
         resultado = numero.toString(base)
         pResultado.style = "color:black"
         pResultado.innerText = "= " + resultado
+
+        pResultado.addEventListener('click', copiar)
+        function copiar(){
+                let copy = resultado;
+                navigator.clipboard.writeText(copy)
+                alert("Texto copiado en portapapeles")
+        }
     }
     else{
         pResultado.innerText = "¡Lo sentimos! Algo salió mal."
@@ -41,15 +48,22 @@ function calcularBin(){
         const baseBin = baseAUsarBin.value
 
     if (baseBin > 0){
-        let resultadoBin;
-        resultadoBin = numeroBin.toString(baseBin)
-        pResultadoBin.style = "color:black"
-        pResultadoBin.innerText = "= " + resultadoBin
-    }
-    else{
-        pResultadoBin.innerText = "¡Lo sentimos! Algo salió mal."
-        pResultadoBin.style = "color:red"
-    }
+                let resultadoBin;
+                resultadoBin = numeroBin.toString(baseBin)
+                pResultadoBin.style = "color:black"
+                pResultadoBin.innerText = "= " + resultadoBin
+
+                pResultadoBin.addEventListener('click', copiarBin)
+                function copiarBin(){
+                        let copyBin = resultadoBin;
+                        navigator.clipboard.writeText(copyBin)
+                        alert("Texto copiado en portapapeles")
+                }
+        }
+        else{
+                pResultadoBin.innerText = "¡Lo sentimos! Algo salió mal."
+                pResultadoBin.style = "color:red"
+        }
 }
 
 // Conversor Octal
@@ -71,6 +85,13 @@ function calcular_Oct(){
                 resultadoOct = numeroOct.toString(baseOct)
                 pResultadoOct.style = "color:black"
                 pResultadoOct.innerText = "= " + resultadoOct
+
+                pResultadoOct.addEventListener('click', copiarOct)
+                function copiarOct(){
+                        let copyOct = resultadoOct;
+                        navigator.clipboard.writeText(copyOct)
+                        alert("Texto copiado en portapapeles")
+                }
         }
         else{
                 pResultadoOct.innerText = "¡Lo sentimos! Algo salió mal."
@@ -97,6 +118,13 @@ function calcular_Hex(){
                 resultadoHex= numeroHex.toString(baseHex)
                 pResultadoHex.style = "color:black"
                 pResultadoHex.innerText = "= " + resultadoHex
+
+                pResultadoHex.addEventListener('click', copiarHex)
+                function copiarHex(){
+                        let copyHex = resultadoHex;
+                        navigator.clipboard.writeText(copyHex)
+                        alert("Texto copiado en portapapeles")
+                }
         }
         else{
                 pResultadoHex.innerText = "¡Lo sentimos! Algo salió mal."
@@ -123,31 +151,67 @@ function calculo(){
                 rta = op1 + op2
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (operacion == "*" || operacion == "x" || operacion == "X" || operacion == "."){
                 rta = op1 * op2
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (operacion == "^"){
                 rta = Math.pow(op1,op2)
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (operacion == "/"){
                 rta = op1 / op2
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (operacion == "-" || operacion == "_"){
                 rta = op1 - op2
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (operacion == "%"){
                 rta = op1 % op2
                 pResultado2.style = "color:black"
                 pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else{
         pResultado2.style = "color:red"
@@ -183,6 +247,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_oct == "*" || op_oct == "x" || op_oct == "X" || op_oct == "."){
                 rta_oct = op1_oct * op2_oct
@@ -191,6 +267,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_oct == "^"){
                 rta_oct = Math.pow(op1_oct, op2_oct)
@@ -199,6 +287,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_oct == "/"){
                 rta_oct = op1_oct / op2_oct
@@ -207,6 +307,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_oct == "-" || op_oct == "_"){
                 rta_oct = op1_oct - op2_oct
@@ -215,6 +327,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_oct == "%"){
                 rta_oct = op1_oct % op2_oct
@@ -223,6 +347,18 @@ function calculo_oct(){
                 pRespuestaOct.innerText = "= " + rtaOct
                 pRespuestaOctDec.style = "color:black"
                 pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else{
             pRespuestaOct.style = "color:red"
@@ -256,6 +392,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_hex == "*" || op_hex == "x" || op_hex == "X" || op_hex == "."){
                 rta_hex = op1_hex * op2_hex
@@ -264,6 +412,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_hex == "^"){
                 rta_hex = Math.pow(op1_hex, op2_hex)
@@ -272,6 +432,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_hex == "/"){
                 rta_hex = op1_hex / op2_hex
@@ -280,6 +452,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_hex == "-" || op_hex == "_"){
                 rta_hex = op1_hex - op2_hex
@@ -288,6 +472,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else if (op_hex == "%"){
                 rta_hex = op1_hex % op2_hex
@@ -296,6 +492,18 @@ function calculo_hex(){
                 pRespuestaHex.innerText = "= " + rtaHex
                 pRespuestaHexDec.style = "color:black"
                 pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
         }
         else{
             pRespuestaHex.style = "color:red"
