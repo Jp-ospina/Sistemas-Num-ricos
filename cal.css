@@ -53,21 +53,21 @@ section a:hover, a:active{
     border-radius: 8px;
 }
 
-#boton1, #boton2, #boton1_bin, #boton2_bin, #boton1_oct, #boton2_oct, #boton1_hex, #boton2_hex, #op1, #op2, #operacion, #op1_oct, #op2_oct, #op_oct, #op1_hex, #op2_hex, #op_hex{
+#boton1, #boton2, #boton1_bin, #boton2_bin, #boton1_oct, #boton2_oct, #boton1_hex, #boton2_hex, #op1, #op2, #operacion, #op1_bin, #op2_bin, #op_bin, #op1_oct, #op2_oct, #op_oct, #op1_hex, #op2_hex, #op_hex{
     margin: 0.5% auto;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#calcular, #boton3, #calcular_bin, #boton3_bin, #calcular_Oct, #boton3_oct, #calcular_Hex, #boton3_hex, #calcular2, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
+#calcular, #boton3, #calcular_bin, #boton3_bin, #calcular_Oct, #boton3_oct, #calcular_Hex, #boton3_hex, #calcular2, #calcular_bin, #reset_bin, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
     margin: 0.5% auto;
     padding: 5% auto;
     border: solid black 1px;
     border-radius: 5px;
 }
 
-#resultado, #resultado_bin, #resultado_oct, #resultado_hex, #respuesta2, #respuesta_oct, #respuesta_hex, #respuesta_bin, #respuesta_oct_dec, #respuesta_hex_dec{
+#resultado, #resultado_bin, #resultado_oct, #resultado_hex, #respuesta2, #respuesta_oct, #respuesta_hex, #respuesta_bin, #respuesta_bin_dec, #respuesta_oct_dec, #respuesta_hex_dec{
     transition: box-shadow 0.3s ease;
     background-color: white;
     width: 320px;
@@ -77,6 +77,6 @@ section a:hover, a:active{
     cursor: pointer;
 }
 
-#resultado:hover, #resultado_bin:hover, #resultado_oct:hover, #resultado_hex:hover, #respuesta2:hover, #respuesta_oct:hover, #respuesta_hex:hover, #respuesta_bin:hover, #respuesta_oct_dec:hover, #respuesta_hex_dec:hover{
+#resultado:hover, #resultado_bin:hover, #resultado_oct:hover, #resultado_hex:hover, #respuesta2:hover, #respuesta_bin_dec:hover, #respuesta_oct:hover, #respuesta_hex:hover, #respuesta_bin:hover, #respuesta_oct_dec:hover, #respuesta_hex_dec:hover{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
 }
