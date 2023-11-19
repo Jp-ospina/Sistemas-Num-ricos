@@ -37,7 +37,7 @@ function calcular(){
 
 const numeroAConvertirBin = document.getElementById("boton1_bin")
 const baseAUsarBin = document.getElementById("boton2_bin")
-const btnCalcularBin = document.getElementById("calcular_bin")
+const btnCalcularBin = document.getElementById("calcular_Bin")
 const pResultadoBin = document.getElementById("resultado_bin")
 
 btnCalcularBin.addEventListener('click', calcularBin)
@@ -220,8 +220,148 @@ function calculo(){
 
 // Calculadora binaria
 
-const pRespuestaBin = document.getElementById('respuesta_bin')
-pRespuestaBin.innerText = "¡FALTA LA CALCULADORA BINARIA!"
+const numBin1 = document.getElementById("op1_bin")
+const opBin = document.getElementById("op_bin")
+const numBin2 = document.getElementById("op2_bin")
+const btBin = document.getElementById("calcular_bin")
+const pRespuestaBin = document.getElementById("respuesta_bin")
+const pRespuestaBinDec = document.getElementById("respuesta_bin_dec")
+
+btBin.addEventListener('click', calculo_bin)
+
+function calculo_bin(){
+        let binToDecimal = bin => parseInt(bin, 2);
+        let op1_bin = binToDecimal(numBin1.value);
+        let op2_bin = binToDecimal(numBin2.value);
+        const op_bin = opBin.value
+        
+        if (op_bin == "+"){
+                rta_bin = op1_bin + op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == "*" || op_bin == "x" || op_bin == "X" || op_bin == "."){
+                rta_bin = op1_bin * op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == "^"){
+                rta_bin = Math.pow(op1_bin, op2_bin)
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == "/"){
+                rta_bin = op1_bin / op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == "-" || op_bin == "_"){
+                rta_bin = op1_bin - op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == "%"){
+                rta_bin = op1_bin % op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else{
+            pRespuestaBin.style = "color:red"
+            pRespuestaBin.innerText = "¡Lo sentimos! Algo salió mal."
+            pRespuestaBinDec.style = 'color:red'
+            pRespuestaBinDec.innerText = 'Error'}
+}
+
 
 // Calculadora octal
 
