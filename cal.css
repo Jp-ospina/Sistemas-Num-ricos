@@ -13,6 +13,12 @@ header {
     padding: 20px 15px;
 }
 
+h3, .textoPlano {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
 section ol {
     background-color: rgb(190, 190, 125);
     padding-left: 50px;
@@ -33,21 +39,31 @@ section a:hover, a:active{
     text-decoration: none;
 }
 
-#container1, #container2{
+#container1, #container2, #container3, #container4{
     display: flex;
     margin: 0 15%;
 }
 
-.titleConv{
+.titleConv, .titleCal{
     margin: 0;
     padding: 0;
 }
 
 .subsection{
     text-align: center;
-    background-color: rgba(0, 72, 27, 0.9);
+    background-color: rgba(42, 76, 38, 0.7);
     width: 350px;;
     height: 180px;
+    margin: 30px 50px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 8px;
+}
+
+.Subsection{
+    text-align: center;
+    background-color: rgba(76, 38, 53, 0.7);
+    width: 350px;;
+    height: 260px;
     margin: 30px 50px;
     padding: 30px 30px 30px 30px;
     border-radius: 8px;
@@ -80,3 +96,21 @@ section a:hover, a:active{
 #resultado:hover, #resultado_bin:hover, #resultado_oct:hover, #resultado_hex:hover, #respuesta2:hover, #respuesta_bin_dec:hover, #respuesta_oct:hover, #respuesta_hex:hover, #respuesta_bin:hover, #respuesta_oct_dec:hover, #respuesta_hex_dec:hover{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 3);
 }
+
+footer{
+    background-color: black;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#subir {
+    width: 100px;
+    color: rgb(190, 190, 125);
+    text-decoration: none;
+    margin: 0px auto;
+    padding: 20px 15px;
+}
+
+#subir:hover{ color: rgb(150, 81, 214);}
+#subir:active{ color: white;}
