@@ -19,6 +19,20 @@ h3, .textoPlano {
     text-align: justify;
 }
 
+.negrilla {
+    color: red;
+}
+
+ul {
+    background-color: rgb(190, 190, 125);
+    padding-left: 50px;
+    padding-right: 30px;
+    margin: 30px auto;
+    border-right: 15px;
+    width: 22%;
+    list-style: inside;
+}
+
 section ol {
     background-color: rgb(190, 190, 125);
     padding-left: 50px;
@@ -76,7 +90,7 @@ section a:hover, a:active{
     border-radius: 5px;
 }
 
-#calcular, #boton3, #calcular_bin, #boton3_bin, #calcular_Oct, #boton3_oct, #calcular_Hex, #boton3_hex, #calcular2, #calcular_bin, #reset_bin, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
+#calcular, #boton3, #calcular_Bin, #boton3_bin, #calcular_Oct, #boton3_oct, #calcular_Hex, #boton3_hex, #calcular2, #calcular_bin, #reset_bin, #calcular_oct, #reset_oct, #calcular_hex, #reset_hex{
     margin: 0.5% auto;
     padding: 5% auto;
     border: solid black 1px;
