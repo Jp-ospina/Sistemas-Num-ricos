@@ -213,6 +213,18 @@ function calculo(){
                 alert("Texto copiado en portapapeles")
                 }
         }
+        else if (operacion == ":"){
+
+                rta = Math.pow(op1, 1/op2)
+                pResultado2.style = "color:black"
+                pResultado2.innerText = "= " + rta
+
+                pResultado2.addEventListener('click', copiarCal)
+                function copiarCal(){
+                navigator.clipboard.writeText(rta)
+                alert("Texto copiado en portapapeles")
+                }
+        }
         else{
         pResultado2.style = "color:red"
         pResultado2.innerText = "¡Lo sentimos! Algo salió mal."}
@@ -337,6 +349,27 @@ function calculo_bin(){
         }
         else if (op_bin == "%"){
                 rta_bin = op1_bin % op2_bin
+                rtaBin = rta_bin.toString(2)
+                pRespuestaBin.style = "color:black"
+                pRespuestaBin.innerText = "= " + rtaBin
+                pRespuestaBinDec.style = "color:black"
+                pRespuestaBinDec.innerText = "Decimal = " + rta_bin
+
+                pRespuestaBin.addEventListener('click', copiarCalBin)
+                function copiarCalBin(){
+                navigator.clipboard.writeText(rtaBin)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestBintDec.addEventListener('click', copiarCalBinDec)
+                function copiarCalBinDec(){
+                navigator.clipboard.writeText(rta_bin)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_bin == ":"){
+
+                rta_bin = Math.pow(op1_bin, 1/op2_bin)
                 rtaBin = rta_bin.toString(2)
                 pRespuestaBin.style = "color:black"
                 pRespuestaBin.innerText = "= " + rtaBin
@@ -500,6 +533,27 @@ function calculo_oct(){
                 alert("Texto copiado en portapapeles")
                 }
         }
+        else if (op_oct == ":"){
+
+                rta_oct = Math.pow(op1_oct, 1/op2_oct)
+                rtaOct = rta_oct.toString(8)
+                pRespuestaOct.style = "color:black"
+                pRespuestaOct.innerText = "= " + rtaOct
+                pRespuestaOctDec.style = "color:black"
+                pRespuestaOctDec.innerText = "Decimal = " + rta_oct
+
+                pRespuestaOct.addEventListener('click', copiarCalOct)
+                function copiarCalOct(){
+                navigator.clipboard.writeText(rtaOct)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaOctDec.addEventListener('click', copiarCalOctDec)
+                function copiarCalOctDec(){
+                navigator.clipboard.writeText(rta_oct)
+                alert("Texto copiado en portapapeles")
+                }
+        }
         else{
             pRespuestaOct.style = "color:red"
             pRespuestaOct.innerText = "¡Lo sentimos! Algo salió mal."
@@ -627,6 +681,27 @@ function calculo_hex(){
         }
         else if (op_hex == "%"){
                 rta_hex = op1_hex % op2_hex
+                rtaHex = rta_hex.toString(16)
+                pRespuestaHex.style = "color:black"
+                pRespuestaHex.innerText = "= " + rtaHex
+                pRespuestaHexDec.style = "color:black"
+                pRespuestaHexDec.innerText = "Decimal = " + rta_hex
+
+                pRespuestaHex.addEventListener('click', copiarCalHex)
+                function copiarCalHex(){
+                navigator.clipboard.writeText(rtaHex)
+                alert("Texto copiado en portapapeles")
+                }
+
+                pRespuestaHexDec.addEventListener('click', copiarCalHexDec)
+                function copiarCalHexDec(){
+                navigator.clipboard.writeText(rta_hex)
+                alert("Texto copiado en portapapeles")
+                }
+        }
+        else if (op_hex == ":"){
+
+                rta_hex = Math.pow(op1_hex, 1/op2_hex)
                 rtaHex = rta_hex.toString(16)
                 pRespuestaHex.style = "color:black"
                 pRespuestaHex.innerText = "= " + rtaHex
