@@ -63,7 +63,7 @@ section a:hover, a:active{
     padding: 0;
 }
 
-.subsection{
+.subsectionA{
     text-align: center;
     background-color: rgba(42, 76, 38, 0.7);
     width: 350px;;
@@ -73,9 +73,29 @@ section a:hover, a:active{
     border-radius: 8px;
 }
 
-.Subsection{
+.subsectionB{
     text-align: center;
     background-color: rgba(76, 38, 53, 0.7);
+    width: 350px;;
+    height: 180px;
+    margin: 30px 50px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 8px;
+}
+
+.SubsectionA{
+    text-align: center;
+    background-color: rgba(76, 38, 53, 0.7);
+    width: 350px;;
+    height: 260px;
+    margin: 30px 50px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 8px;
+}
+
+.SubsectionB{
+    text-align: center;
+    background-color: rgba(42, 76, 38, 0.7);
     width: 350px;;
     height: 260px;
     margin: 30px 50px;
@@ -120,7 +140,7 @@ footer{
 
 #subir {
     width: 100px;
-    color: rgb(190, 190, 125);
+    color: rgb(177, 177, 117);
     text-decoration: none;
     margin: 0px auto;
     padding: 20px 15px;
